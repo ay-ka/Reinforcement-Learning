@@ -1,0 +1,14 @@
+numpy==1.21.6
+torch==1.9.0
+torchvision==0.10.0
+torchviz==0.0.2
+einops==0.3.2
+pettingzoo==1.13.1
+gym==0.21.0
+pressureplate==0.0.1
+rware==1.0.3
+matplotlib==3.2.2
+loguru==0.6.0
+wandb==0.10.5
+robosuite==1.2.2
+opencv-python==4.2.0.34
