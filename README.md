@@ -140,7 +140,7 @@ this section explain instructions which should be followed to setting up the pro
   <li>install all library specified whithin <b>requirement.txt</b> on  your virtual env</li>
 </ul>
 
-<b>Benchmarks Available:</b>
+<h6>Benchmarks Available:</h6>
 <ol type="1">
   <li><b>CEM_MADDPG & CMAES_MADDPG & ERL_MADDPG</b> --> RWARE, MPE, PressurePlate</li>
   <li><b>ROBOSUITE_MADDPG</b> --> Robosuite (in codes use RobotManipulator) </li>
