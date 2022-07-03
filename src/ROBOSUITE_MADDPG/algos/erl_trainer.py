@@ -171,7 +171,7 @@ class ERL_Trainer:
 
 			if gen % 100 == 0 and gen>= 0:
 				for eval_count in range(100):
-					_, fitness, _, _, _, _ = rollout_worker(None, "test_add", True, None, self.env_constructor, self.learner, self.epsilons)
+					_, fitness, _, _, _, _ = rollout_worker(None, "test_add", True, None, self.env_constructor, self.learner, self.epsilons, self.args)
 					logger.log("EVALUATE", f"gen {gen} step {eval_count} fitness {fitness}")
 
 

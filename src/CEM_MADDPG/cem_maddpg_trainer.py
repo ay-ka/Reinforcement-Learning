@@ -455,7 +455,7 @@ class Trainer:
             
             actor_input = rearrange(actor_input, "d0 d1 d2 -> (d0 d1) d2")
             
-            if self.args.rnn_hidden_dim == 0:
+            if self.rnn_hidden_dim == 0:
                 
                 logit, target_hidden_states = self.target_actor(actor_input, None)
                 
@@ -476,7 +476,7 @@ class Trainer:
                     
             if ea:
                 
-                if self.args.rnn_hidden_dim==0:
+                if self.rnn_hidden_dim==0:
                     
                     logit, hidden_states = self.actor_ea(actor_input, None) 
                 else:
@@ -489,7 +489,7 @@ class Trainer:
                         
             else:
                 
-                if self.args.rnn_hidden_dim==0:
+                if self.rnn_hidden_dim==0:
                     
                     logit, hidden_states = self.actor(actor_input, None) 
                 else:

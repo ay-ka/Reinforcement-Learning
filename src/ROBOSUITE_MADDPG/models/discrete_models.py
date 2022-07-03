@@ -176,7 +176,7 @@ class MADDPG_Actor(nn.Module):
         return logits, new_hidden_state    
     
     
-    def clean_action(self, obs_batch, learner, collecting_data = True, use_target = False):
+    def clean_action(self, obs_batch, learner, collecting_data = True, use_target = False, args = None):
         
         batch_size, episode_limit, num_agent = obs_batch.shape[0], obs_batch.shape[1], obs_batch.shape[2]
         specify_agent = torch.eye(num_agent).expand(batch_size, episode_limit, num_agent, -1)
@@ -188,7 +188,7 @@ class MADDPG_Actor(nn.Module):
         actor_input = utils.ToTensor_(actor_input) 
         actor_input = rearrange(actor_input, "d0 d1 d2 -> (d0 d1) d2")
         if args.rnn_hidden_dim == 0:
-            logit, hidden_states = self.forward(actor_input, None)
+            actions, hidden_states = self.forward(actor_input, None)
         else:
             hidden_states = rearrange(learner.hidden_states, "d0 d1 d2 -> (d0 d1) d2")
             actions, hidden_states = self.forward(actor_input, hidden_states)

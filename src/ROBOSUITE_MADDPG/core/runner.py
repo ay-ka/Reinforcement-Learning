@@ -45,7 +45,7 @@ def rollout_worker(id = 0, type = "test", store_data = True, model_bucket = None
 
 ####################################################################
         #get action
-        action = net.clean_action(utils.Unsqueeze(obs, dim = 0), learner, collecting_data = True)
+        action = net.clean_action(utils.Unsqueeze(obs, dim = 0), learner, collecting_data = True, args = args)
 
         #convert action to 2d in input not in total (in total 3d)
         next_obs, reward, done, done_env = env.step(utils.Squeeze(action, dim = 0))  
