@@ -187,9 +187,12 @@ class MADDPG_Actor(nn.Module):
         actor_input = copy.deepcopy(actor_input[:, 0])
         actor_input = utils.ToTensor_(actor_input) 
         actor_input = rearrange(actor_input, "d0 d1 d2 -> (d0 d1) d2")
-        hidden_states = rearrange(learner.hidden_states, "d0 d1 d2 -> (d0 d1) d2")
-        action, hidden_states = self.forward(actor_input, hidden_states)
-        learner.hidden_states = hidden_states.view(batch_size, learner.num_agent, learner.rnn_hidden_dim)
+        if args.rnn_hidden_dim == 0:
+            logit, hidden_states = self.forward(actor_input, None)
+        else:
+            hidden_states = rearrange(learner.hidden_states, "d0 d1 d2 -> (d0 d1) d2")
+            actions, hidden_states = self.forward(actor_input, hidden_states)
+            learner.hidden_states = hidden_states.view(batch_size, learner.num_agent, learner.rnn_hidden_dim)
           
 
         

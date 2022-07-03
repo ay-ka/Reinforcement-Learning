@@ -455,11 +455,17 @@ class Trainer:
             
             actor_input = rearrange(actor_input, "d0 d1 d2 -> (d0 d1) d2")
             
-            target_hidden_states = rearrange(self.target_hidden_states, "d0 d1 d2 -> (d0 d1) d2")
-                    
-            logit, target_hidden_states = self.target_actor(actor_input, target_hidden_states)
-
-            self.target_hidden_states  = target_hidden_states.view(batch_size, self.num_agent, self.rnn_hidden_dim)
+            if self.args.rnn_hidden_dim == 0:
+                
+                logit, target_hidden_states = self.target_actor(actor_input, None)
+                
+            else:
+                
+                target_hidden_states = rearrange(self.target_hidden_states, "d0 d1 d2 -> (d0 d1) d2")
+                
+                logit, target_hidden_states = self.target_actor(actor_input, target_hidden_states)
+                
+                self.target_hidden_states = target_hidden_states.view(batch_size, self.num_agent, self.rnn_hidden_dim)
 
                         
         else:
@@ -467,20 +473,32 @@ class Trainer:
             actor_input = self.ToTensor_(actor_input)
             
             actor_input = rearrange(actor_input, "d0 d1 d2 -> (d0 d1) d2")
-            
-            hidden_states = rearrange(self.hidden_states, "d0 d1 d2 -> (d0 d1) d2")
                     
             if ea:
-                        
-                logit, hidden_states = self.actor_ea(actor_input, hidden_states)
-
-                self.hidden_states = hidden_states.view(batch_size, self.num_agent, self.rnn_hidden_dim)
+                
+                if self.args.rnn_hidden_dim==0:
+                    
+                    logit, hidden_states = self.actor_ea(actor_input, None) 
+                else:
+                    
+                    hidden_states = rearrange(self.hidden_states, "d0 d1 d2 -> (d0 d1) d2")
+                    
+                    logit, hidden_states = self.actor(actor_input, hidden_states) 
+                    
+                    self.hidden_states = hidden_states.view(batch_size, self.num_agent, self.rnn_hidden_dim)
                         
             else:
                 
-                logit, hidden_states = self.actor(actor_input, hidden_states)
-
-                self.hidden_states = hidden_states.view(batch_size, self.num_agent, self.rnn_hidden_dim)
+                if self.args.rnn_hidden_dim==0:
+                    
+                    logit, hidden_states = self.actor(actor_input, None) 
+                else:
+                    
+                    hidden_states = rearrange(self.hidden_states, "d0 d1 d2 -> (d0 d1) d2")
+                    
+                    logit, hidden_states = self.actor(actor_input, hidden_states) 
+                    
+                    self.hidden_states = hidden_states.view(batch_size, self.num_agent, self.rnn_hidden_dim)
 
         # if use_target:
             

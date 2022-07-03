@@ -159,16 +159,22 @@ class MADDPG:
         if use_target:       
             actor_input = utils.ToTensor_(actor_input)
             actor_input = rearrange(actor_input, "d0 d1 d2 -> (d0 d1) d2")
-            target_hidden_states = rearrange(self.target_hidden_states, "d0 d1 d2 -> (d0 d1) d2")
-            actions, target_hidden_states = self.actor_target(actor_input, target_hidden_states)
-            self.target_hidden_states = target_hidden_states.view(batch_size, self.num_agent, self.rnn_hidden_dim)
+            if self.args.rnn_hidden_dim == 0:
+                actions, target_hidden_states = self.actor_target(actor_input, None)
+            else:
+                target_hidden_states = rearrange(self.target_hidden_states, "d0 d1 d2 -> (d0 d1) d2")
+                actions, target_hidden_states = self.actor_target(actor_input, target_hidden_states)
+                self.target_hidden_states = target_hidden_states.view(batch_size, self.num_agent, self.rnn_hidden_dim)
                    
         else:        
             actor_input = utils.ToTensor_(actor_input)
             actor_input = rearrange(actor_input, "d0 d1 d2 -> (d0 d1) d2")
-            hidden_states = rearrange(self.hidden_states, "d0 d1 d2 -> (d0 d1) d2")
-            actions, hidden_states = self.actor(actor_input, hidden_states)    
-            self.hidden_states = hidden_states.view(batch_size, self.num_agent, self.rnn_hidden_dim)
+            if self.args.rnn_hidden_dim==0:
+                actions, hidden_states = self.actor(actor_input, None) 
+            else:
+                hidden_states = rearrange(self.hidden_states, "d0 d1 d2 -> (d0 d1) d2")
+                actions, hidden_states = self.actor(actor_input, hidden_states)    
+                self.hidden_states = hidden_states.view(batch_size, self.num_agent, self.rnn_hidden_dim)
                 
         actions = actions.view(batch_size, self.num_agent, -1)
         actions = torch.clip(actions, min = 0, max = 1)

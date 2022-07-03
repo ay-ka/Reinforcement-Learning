@@ -22,6 +22,7 @@ class GymWrapper:
         A base template for all environment wrappers.
         """
         self.env_name = env_name
+        self.num_agents = num_agents
         
         
         if env_name == "RWARE":  
@@ -34,10 +35,10 @@ class GymWrapper:
             if mode == "hard":
                 self.env = gym.make("rware-large-" + str(num_agents) + "ag-v1")       
         elif env_name == "MPE":
-            self.env = simple_spread_v2.env(N = 3, max_cycles=25, local_ratio = 0)
+            self.env = simple_spread_v2.env(N = num_agents, max_cycles=25, local_ratio = 0)
 
         elif env_name == "PressurePlate":
-            self.env = gym.make('pressureplate-linear-4p-v0')
+            self.env = gym.make('pressureplate-linear-' + str(self.num_agents) + 'p-v0')
         
         
         self.is_discrete = self.is_discrete(self.env) # need modification
@@ -116,7 +117,7 @@ class GymWrapper:
                 rewards.append([reward])
                 dones.append(done)           
             reward = np.sum(rewards)
-            rewards = [[reward]] * 3 # num agent
+            rewards = [[reward]] * self.num_agents # num agent
                 
         else:
             next_obs, rewards, dones, info = self.env.step(action)

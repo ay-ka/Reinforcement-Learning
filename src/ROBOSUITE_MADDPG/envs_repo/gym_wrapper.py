@@ -27,6 +27,7 @@ class GymWrapper:
         """
         
         self.env_name = env_name
+        self.num_agents = args.agents
         
         
         if env_name == "RWARE":  
@@ -39,10 +40,10 @@ class GymWrapper:
             if mode == "hard":
                 self.env = gym.make("rware-large-" + str(args.agents) + "ag-v1")       
         elif env_name == "MPE":
-            self.env = simple_spread_v2.env(N = 2, max_cycles=25, local_ratio = 0, continuous_actions = True)
+            self.env = simple_spread_v2.env(N = self.num_agents, max_cycles=25, local_ratio = 0, continuous_actions = True)
 
         elif env_name == "PressurePlate":
-            self.env = gym.make('pressureplate-linear-4p-v0')
+            self.env = gym.make('pressureplate-linear-' + str(self.num_agents) + 'p-v0')
 
         elif env_name == "RobotManipulator":
             self.env = robosuite.make(
