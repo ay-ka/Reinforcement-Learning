@@ -142,9 +142,9 @@ this section explain instructions which should be followed to setting up the pro
 
 <h6>Benchmarks Available:</h6>
 <ol type="1">
-  <li><b>CEM_MADDPG & CMAES_MADDPG & ERL_MADDPG</b> --> RWARE, MPE, PressurePlate</li>
-  <li><b>ROBOSUITE_MADDPG</b> --> Robosuite (in codes use RobotManipulator) </li>
-  <li><b>QMIX_NEAT</b> --> RWARE</li>
+  <li>CEM_MADDPG & CMAES_MADDPG & ERL_MADDPG --> RWARE, MPE, PressurePlate</li>
+  <li>ROBOSUITE_MADDPG --> Robosuite (in codes use RobotManipulator) </li>
+  <li>QMIX_NEAT --> RWARE</li>
 </ol>
 
 ### How To Run
