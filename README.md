@@ -53,28 +53,24 @@ Value Function Factorisation for Deep Multi-Agent Reinforcement Learning) as wel
 
 <ul>
   <li>
-    <b><a href="https://arxiv.org/abs/1706.02275">MADDPG (Multi-Agent Deep Deterministic Policy Gradient)</a>:</b> MADDPG, or Multi-agent DDPG, extends                                                       DDPG into a multi-agent policy gradient algorithm where decentralized agents learn a centralized critic                                                     based on the observations and actions of all 
+    <b><a href="https://arxiv.org/abs/1706.02275">MADDPG (Multi-Agent Deep Deterministic Policy Gradient)</a>:</b> MADDPG, or Multi-agent DDPG, extends                                                       DDPG into a multi-agent policy gradient algorithm where decentralized agents learn a centralized critic based on the observations and actions of all 
 
 agents.
   </li
   <li>
-     <b><a href="https://arxiv.org/abs/1803.11485">QMIX (Monotonic Value Function Factorisation for Deep Multi-Agent Reinforcement Learning)</a>:</b> QMIX                                                    is a multi agent deep reinforcement learning methods based on Q-learning and value-defactorazations;                                                        novel value-based method that can train decentralised policies in a centralised end-to-end fashion
+     <b><a href="https://arxiv.org/abs/1803.11485">QMIX (Monotonic Value Function Factorisation for Deep Multi-Agent Reinforcement Learning)</a>:</b> QMIX is a multi agent deep reinforcement learning methods based on Q-learning and value-defactorazations; novel value-based method that can train decentralised policies in a centralised end-to-end fashion
   </li>
   <li>
-    <b><a href="https://nn.cs.utexas.edu/downloads/papers/stanley.cec02.pdf">NEAT (NeuroEvolution of Augmenting Topology)</a>:</b> NEAT (NeuroEvolution 
-
-of                                                                Augmenting Topologies) is an evolutionary algorithm that creates artificial neural networks
+    <b><a href="https://nn.cs.utexas.edu/downloads/papers/stanley.cec02.pdf">NEAT (NeuroEvolution of Augmenting Topology)</a>:</b> NEAT (NeuroEvolution of Augmenting Topologies) is an evolutionary algorithm that creates artificial neural networks
   </li>
   <li>
-    <b><a href="https://link.springer.com/article/10.1007/s10479-005-5724-z">CEM (Cross Enthropy Method)</a>: </b> The cross-entropy method is a versatile              heuristic tool for solving difficult estimation and optimization problems, based on Kullback–Leibler (or cross-entropy) minimization.
+    <b><a href="https://link.springer.com/article/10.1007/s10479-005-5724-z">CEM (Cross Enthropy Method)</a>: </b> The cross-entropy method is a versatile heuristic tool for solving difficult estimation and optimization problems, based on Kullback–Leibler (or cross-entropy) minimization.
   </li>
   <li>
-    <b><a href="https://en.wikipedia.org/wiki/CMA-ES">CMA-ES (Covariance Matrix Adaption - Evolutionary Strategies): (PSO)</a>:</b> The  CMA-ES (Covariance                   Matrix Adaptation 
-
-Evolution Strategy) is an evolutionary algorithm for difficult non-linear non-convex black-box optimisation problems in                   continuous domain
+    <b><a href="https://en.wikipedia.org/wiki/CMA-ES">CMA-ES (Covariance Matrix Adaption - Evolutionary Strategies): (PSO)</a>:</b> The  CMA-ES (Covariance Matrix Adaptation Evolution Strategy) is an evolutionary algorithm for difficult non-linear non-convex black-box optimisation problems in continuous domain
   </li>
   <li>
-    <b>Genetic:</b> A genetic algorithm is a search heuristic that is inspired by Charles Darwin’s theory of natural evolution. This algorithm reflects the                     process of natural selection where the fittest individuals are selected for reproduction in order to produce offspring of the next                         generation. 
+    <b>Genetic:</b> A genetic algorithm is a search heuristic that is inspired by Charles Darwin’s theory of natural evolution. This algorithm reflects the process of natural selection where the fittest individuals are selected for reproduction in order to produce offspring of the next generation. 
   </li>
   <br/>
 </ul>
@@ -85,20 +81,16 @@ Evolution Strategy) is an evolutionary algorithm for difficult non-linear non-co
 
 <ul>
   <li>
-    <b><a href="https://robosuite.ai/">Robosuite (Robotic Manipulator Benchmark)</a>:</b> robosuite is a simulation framework powered by the MuJoCo physics                                                     engine for robot learning. It also offers a suite of benchmark environments for reproducible research.
+    <b><a href="https://robosuite.ai/">Robosuite (Robotic Manipulator Benchmark)</a>:</b> robosuite is a simulation framework powered by the MuJoCo physics engine for robot learning. It also offers a suite of benchmark environments for reproducible research.
   </li
   <li>
-    <b><a href="https://github.com/uoe-agents/robotic-warehouse">RWARE (Robotic Warehouse; A multi-agent reinforcement learning environment)</a>:</b> The                           multi-robot warehouse (RWARE) environment simulates a warehouse with robots moving 
-
-and delivering requested goods. We based the                             simulator on real-world applications, in which robots pick-up shelves and deliver them to a workstation.
+    <b><a href="https://github.com/uoe-agents/robotic-warehouse">RWARE (Robotic Warehouse; A multi-agent reinforcement learning environment)</a>:</b> The                           multi-robot warehouse (RWARE) environment simulates a warehouse with robots moving and delivering requested goods. We based the simulator on real-world applications, in which robots pick-up shelves and deliver them to a workstation.
   </li>
   <li>
-    <b><a href="https://github.com/openai/multiagent-particle-envs">MPE (Multi-Agent Particle Environment)</a>:</b> A simple multi-agent particle world                                                           with a continuous observation and discrete action space, along with some basic simulated physics.
+    <b><a href="https://github.com/openai/multiagent-particle-envs">MPE (Multi-Agent Particle Environment)</a>:</b> A simple multi-agent particle world with a continuous observation and discrete action space, along with some basic simulated physics.
   </li>
   <li>
-    <b><a href="https://github.com/uoe-agents/pressureplate">PRESSUREPLATE</a>: </b> PressurePlate is a multi-agent environment that requires agents             to cooperate during the traversal of a 
-
-gridworld. The grid is partitioned into several rooms, and each room contains a plate and a closed                   doorway.
+    <b><a href="https://github.com/uoe-agents/pressureplate">PRESSUREPLATE</a>: </b> PressurePlate is a multi-agent environment that requires agents to cooperate during the traversal of a gridworld. The grid is partitioned into several rooms, and each room contains a plate and a closed doorway.
   </li>
 </ul>
 
