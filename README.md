@@ -6,11 +6,9 @@
 <br />
 <div align="center">
   <a href="https://github.com/ay-ka/Algorithms">
-    <img style="float:left" src="images/rl.png" alt="evolution" width="700" height="300">
+    <img style="float:left" src="images/rl.png" alt="reinforcement learning" width="700" height="300">
   </a>
-  <h6 align="center"; display: flex; justify-content: center>Implementation of MADDPG (Multi-Agent Deep Deterministic Policy Gradient) and QMIX (Monotonic 
-
-Value Function Factorisation for Deep Multi-Agent Reinforcement Learning) as well as combining these RL algorithms with EA algorithms (CMAES, CEM, NEAT) & applying to different Benchmark such as Robosuite (Robotic Manipulator Benchmark) </h6>
+  <h6 align="center"; display: flex; justify-content: center>Implementation of MADDPG (Multi-Agent Deep Deterministic Policy Gradient) and QMIX (Monotonic Value Function Factorisation for Deep Multi-Agent Reinforcement Learning) as well as combining these RL algorithms with EA algorithms (CMAES, CEM, NEAT) & applying to different Benchmark such as Robosuite (Robotic Manipulator Benchmark) </h6>
 </div>
 
 <br />
@@ -24,7 +22,6 @@ Value Function Factorisation for Deep Multi-Agent Reinforcement Learning) as wel
       <a href="#about-the-project">About The Project</a>
     </li>
     <li>
-
       <a href="#getting-started">Getting Started</a>
       <ul>
         <li><a href="#Prerequisites-Installation">Prerequisites & Installation</a></li>
