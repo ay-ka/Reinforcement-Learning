@@ -397,10 +397,6 @@ Project Link: [https://github.com/ay-ka/Reinforcement-Learning](https://github.c
 ## Acknowledgments
 
 
-Use this space to list resources you find helpful and would like to give credit to. I've included a few of my favorites to kick things off!
-
-* [pytopia - a platform for learning python](https://www.pytopia.ai/)
-
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -414,7 +410,3 @@ badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [product-screenshot]: images/screenshot.png
 
 
-
-  <li>
-    <b>MADDPG applied on Robosuite: </b> This project is about Implementing <b>MADDPG</b> and applying that on <a                                                                        href="https://robosuite.ai/">Robosuite benchmark</a>
-  </li>
