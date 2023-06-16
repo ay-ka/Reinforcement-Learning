@@ -68,23 +68,7 @@ agents.
 </ul>
 
 
-:star:<b> Benchmarked used in this project </b>
 
-
-<ul>
-  <li>
-    <b><a href="https://robosuite.ai/">Robosuite (Robotic Manipulator Benchmark)</a>:</b> robosuite is a simulation framework powered by the MuJoCo physics engine for robot learning. It also offers a suite of benchmark environments for reproducible research.
-  </li
-  <li>
-    <b><a href="https://github.com/uoe-agents/robotic-warehouse">RWARE (Robotic Warehouse; A multi-agent reinforcement learning environment)</a>:</b> The                           multi-robot warehouse (RWARE) environment simulates a warehouse with robots moving and delivering requested goods. We based the simulator on real-world applications, in which robots pick-up shelves and deliver them to a workstation.
-  </li>
-  <li>
-    <b><a href="https://github.com/openai/multiagent-particle-envs">MPE (Multi-Agent Particle Environment)</a>:</b> A simple multi-agent particle world with a continuous observation and discrete action space, along with some basic simulated physics.
-  </li>
-  <li>
-    <b><a href="https://github.com/uoe-agents/pressureplate">PRESSUREPLATE</a>: </b> PressurePlate is a multi-agent environment that requires agents to cooperate during the traversal of a gridworld. The grid is partitioned into several rooms, and each room contains a plate and a closed doorway.
-  </li>
-</ul>
 
 
 
